@@ -40,6 +40,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -112,7 +114,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 214);
+            this.button1.Location = new System.Drawing.Point(3, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 23);
             this.button1.TabIndex = 8;
@@ -121,16 +123,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(534, 214);
+            this.button2.Location = new System.Drawing.Point(534, 315);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(229, 23);
             this.button2.TabIndex = 9;
             this.button2.Text = "Compare";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(3, 243);
+            this.textBox5.Location = new System.Drawing.Point(0, 239);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(760, 20);
             this.textBox5.TabIndex = 10;
@@ -139,16 +142,35 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(89, 326);
+            this.label5.Location = new System.Drawing.Point(89, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(589, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "*NOTE*   The First TextBox Byte Length Must Be >= To All Others";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(345, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "0 Bytes";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(3, 344);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(760, 20);
+            this.textBox6.TabIndex = 13;
+            // 
             // AOBPatternFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button2);
@@ -182,5 +204,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
