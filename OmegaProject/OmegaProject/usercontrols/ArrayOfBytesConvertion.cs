@@ -45,7 +45,8 @@ namespace OmegaProject.usercontrols
 
         private void ProcessList_GridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Clipboard.SetText(ProcessList_GridView[e.ColumnIndex, e.RowIndex].Value.ToString());
+            MessageBox.Show(Clipboard.GetText() + "Copied to Clipboard");
         }
     }
 }
