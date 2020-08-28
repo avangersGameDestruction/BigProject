@@ -67,6 +67,7 @@
             this.arrayOfBytesToolStripMenuItem.Name = "arrayOfBytesToolStripMenuItem";
             this.arrayOfBytesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arrayOfBytesToolStripMenuItem.Text = "Array of Bytes";
+            this.arrayOfBytesToolStripMenuItem.Click += new System.EventHandler(this.arrayOfBytesToolStripMenuItem_Click);
             // 
             // panel1
             // 
