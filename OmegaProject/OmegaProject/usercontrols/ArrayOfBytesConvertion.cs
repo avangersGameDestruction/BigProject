@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using static OmegaProject.Helpers;
 
 namespace OmegaProject.usercontrols
 {
@@ -9,6 +10,17 @@ namespace OmegaProject.usercontrols
         public ArrayOfBytesConvertion()
         {
             InitializeComponent();
+            textBox1.DataBindings.Add("Text", Converter, "FourByte", false, DataSourceUpdateMode.OnPropertyChanged);
+            textBox2.DataBindings.Add("Text", Converter, "FourByte_x8", false, DataSourceUpdateMode.OnPropertyChanged);
+            textBox3.DataBindings.Add("Text", Converter, "FourByte_x8_p6", false, DataSourceUpdateMode.OnPropertyChanged);
+            textBox4.DataBindings.Add("Text", Converter, "Hex", true, DataSourceUpdateMode.OnPropertyChanged, 0, "X");
+            textBox5.DataBindings.Add("Text", Converter, "U30", true, DataSourceUpdateMode.OnPropertyChanged, 0, "X");
+            textBox6.DataBindings.Add("Text", Converter, "Ieeex32", true, DataSourceUpdateMode.OnPropertyChanged, 0, "X");
+            textBox7.DataBindings.Add("Text", Converter, "Ieeex64", true, DataSourceUpdateMode.OnPropertyChanged, 0, "X");
+            textBox8.DataBindings.Add("Text", Converter, "UnityFloatx32", true, DataSourceUpdateMode.OnPropertyChanged, 1, "X");
+            ProcessList_GridView.DefaultCellStyle.SelectionBackColor = ProcessList_GridView.DefaultCellStyle.BackColor;
+            ProcessList_GridView.DefaultCellStyle.SelectionForeColor = ProcessList_GridView.DefaultCellStyle.ForeColor;
+            GetListProcesses();
         }
 
         private void GetListProcesses()
