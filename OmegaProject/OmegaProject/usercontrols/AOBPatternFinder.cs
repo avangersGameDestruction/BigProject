@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
+using System.Text.RegularExpressions;
 
 namespace OmegaProject.usercontrols
 {
@@ -80,6 +82,19 @@ namespace OmegaProject.usercontrols
                 button2.Enabled = false;
                 textBox6.Enabled = true;
                 OmegaProject = 0;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Control TextBoxes in Controls) 
+            {
+                if(TextBoxes is MetroTextBox)
+                {
+                    string RemoveSpaces = Regex.Replace(TextBoxes.Text, @" ", "");
+                    string AddSpaces = Regex.Replace(RemoveSpaces, ".{2}", "$0 ");
+                    TextBoxes.Text = AddSpaces.Trim();
+                }
             }
         }
     }
