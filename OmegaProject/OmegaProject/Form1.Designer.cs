@@ -33,6 +33,7 @@
             this.cheatEngineToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrayOfBytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.aOBPatternFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreatorsStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             // cheatEngineToolsToolStripMenuItem
             // 
             this.cheatEngineToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arrayOfBytesToolStripMenuItem});
+            this.arrayOfBytesToolStripMenuItem,
+            this.aOBPatternFinderToolStripMenuItem});
             this.cheatEngineToolsToolStripMenuItem.Name = "cheatEngineToolsToolStripMenuItem";
             this.cheatEngineToolsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cheatEngineToolsToolStripMenuItem.Text = "Cheat Engine Tools";
@@ -76,6 +78,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 402);
             this.panel1.TabIndex = 1;
+            // 
+            // aOBPatternFinderToolStripMenuItem
+            // 
+            this.aOBPatternFinderToolStripMenuItem.Name = "aOBPatternFinderToolStripMenuItem";
+            this.aOBPatternFinderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aOBPatternFinderToolStripMenuItem.Text = "AOBPatternFinder";
+            this.aOBPatternFinderToolStripMenuItem.Click += new System.EventHandler(this.aOBPatternFinderToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -101,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem cheatEngineToolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrayOfBytesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem aOBPatternFinderToolStripMenuItem;
     }
 }
 

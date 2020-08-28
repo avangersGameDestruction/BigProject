@@ -15,10 +15,12 @@ namespace OmegaProject
     {
 
         ArrayOfBytesConvertion ArrayOfBytes;
+        AOBPatternFinder AOBPatternFinder;
 
         private void ClearPanel()
         {
             if (ArrayOfBytes != null) ArrayOfBytes.Dispose();
+            if (AOBPatternFinder != null) AOBPatternFinder.Dispose();
         }
         public Form1()
         {
@@ -31,6 +33,14 @@ namespace OmegaProject
             ArrayOfBytesConvertion AoB = new ArrayOfBytesConvertion();
             AoB.Dock = DockStyle.Fill;
             panel1.Controls.Add(AoB);
+        }
+
+        private void aOBPatternFinderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+            AOBPatternFinder patternFinder = new AOBPatternFinder();
+            patternFinder.Dock = DockStyle.Fill;
+            panel1.Controls.Add(patternFinder);
         }
     }
 }
