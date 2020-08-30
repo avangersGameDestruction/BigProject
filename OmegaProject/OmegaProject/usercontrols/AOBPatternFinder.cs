@@ -85,6 +85,18 @@ namespace OmegaProject.usercontrols
             }
         }
 
+        private static int SpaceCount(string Project)
+        {
+            int a = 0;
+            string s;
+            for (int i = 0; i < Project.Length; i++)
+            {
+                s = Project.Substring(i, 1);
+                if (s == " ") { a++; }
+            }
+            return a;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Control TextBoxes in Controls) 
@@ -95,6 +107,13 @@ namespace OmegaProject.usercontrols
                     string AddSpaces = Regex.Replace(RemoveSpaces, ".{2}", "$0 ");
                     TextBoxes.Text = AddSpaces.Trim();
                 }
+
+                label1.Text = (textBox1.Text.Length - SpaceCount(textBox1.Text)) / 2 + " bytes";
+                label2.Text = (textBox2.Text.Length - SpaceCount(textBox2.Text)) / 2 + " bytes";
+                label3.Text = (textBox3.Text.Length - SpaceCount(textBox3.Text)) / 2 + " bytes";
+                label4.Text = (textBox4.Text.Length - SpaceCount(textBox4.Text)) / 2 + " bytes";
+                label5.Text = (textBox5.Text.Length - SpaceCount(textBox5.Text)) / 2 + " bytes";
+                ProtectionSource();
             }
         }
     }
