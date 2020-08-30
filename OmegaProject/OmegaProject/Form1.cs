@@ -13,12 +13,13 @@ namespace OmegaProject
 {
     public partial class Form1 : Form
     {
-
+        // calls of differend usercontrols
         ArrayOfBytesConvertion ArrayOfBytes;
         AOBPatternFinder AOBPatternFinder;
         autoclicker autoclicker;
         CsharpFirstUI CsharpFirstUI;
 
+        // private function to scan if any uc is open and close it if new go open
         private void ClearPanel()
         {
             if (ArrayOfBytes != null) ArrayOfBytes.Dispose();
@@ -34,6 +35,7 @@ namespace OmegaProject
             InitializeComponent();
         }
 
+        // opens arrayOfBytes uc
         private void arrayOfBytesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
@@ -43,6 +45,7 @@ namespace OmegaProject
             panel1.Controls.Add(AoB);
         }
 
+        // opens AOBPatternFinder
         private void aOBPatternFinderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
@@ -52,6 +55,7 @@ namespace OmegaProject
             panel1.Controls.Add(patternFinder);
         }
 
+        // opens auto clicker
         private void autoClickerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
@@ -61,6 +65,7 @@ namespace OmegaProject
             panel1.Controls.Add(autoclicker);
         }
 
+        // opens Csharp ui design 1
         private void cUI1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
