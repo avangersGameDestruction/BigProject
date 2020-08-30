@@ -32,8 +32,9 @@
             this.dutchyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheatEngineToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrayOfBytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.aOBPatternFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.autoClickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreatorsStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // dutchyToolStripMenuItem
             // 
             this.dutchyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cheatEngineToolsToolStripMenuItem});
+            this.cheatEngineToolsToolStripMenuItem,
+            this.autoClickerToolStripMenuItem});
             this.dutchyToolStripMenuItem.Name = "dutchyToolStripMenuItem";
             this.dutchyToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.dutchyToolStripMenuItem.Text = "Dutchy";
@@ -71,6 +73,13 @@
             this.arrayOfBytesToolStripMenuItem.Text = "Array of Bytes";
             this.arrayOfBytesToolStripMenuItem.Click += new System.EventHandler(this.arrayOfBytesToolStripMenuItem_Click);
             // 
+            // aOBPatternFinderToolStripMenuItem
+            // 
+            this.aOBPatternFinderToolStripMenuItem.Name = "aOBPatternFinderToolStripMenuItem";
+            this.aOBPatternFinderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aOBPatternFinderToolStripMenuItem.Text = "AOBPatternFinder";
+            this.aOBPatternFinderToolStripMenuItem.Click += new System.EventHandler(this.aOBPatternFinderToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,12 +88,12 @@
             this.panel1.Size = new System.Drawing.Size(766, 402);
             this.panel1.TabIndex = 1;
             // 
-            // aOBPatternFinderToolStripMenuItem
+            // autoClickerToolStripMenuItem
             // 
-            this.aOBPatternFinderToolStripMenuItem.Name = "aOBPatternFinderToolStripMenuItem";
-            this.aOBPatternFinderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aOBPatternFinderToolStripMenuItem.Text = "AOBPatternFinder";
-            this.aOBPatternFinderToolStripMenuItem.Click += new System.EventHandler(this.aOBPatternFinderToolStripMenuItem_Click);
+            this.autoClickerToolStripMenuItem.Name = "autoClickerToolStripMenuItem";
+            this.autoClickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.autoClickerToolStripMenuItem.Text = "auto clicker";
+            this.autoClickerToolStripMenuItem.Click += new System.EventHandler(this.autoClickerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -111,6 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem arrayOfBytesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem aOBPatternFinderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoClickerToolStripMenuItem;
     }
 }
 

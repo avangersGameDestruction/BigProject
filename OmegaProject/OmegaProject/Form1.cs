@@ -42,5 +42,10 @@ namespace OmegaProject
             patternFinder.Dock = DockStyle.Fill;
             panel1.Controls.Add(patternFinder);
         }
+
+        private void autoClickerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
