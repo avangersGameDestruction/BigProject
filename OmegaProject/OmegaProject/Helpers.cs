@@ -13,10 +13,11 @@ namespace OmegaProject
 {
     public class Helpers
     {
+        // call function to use ByteConverter_ inside the class
         public static ByteConverter_ Converter = new ByteConverter_();
-
+        // Types of error or warning messages ect
         public enum MessageType { INFO, WARNING, ERROR, CANCELED }
-
+        // static string for calling the errorlist and show whats wrong
         public static string[] ErrorList = { };
 
         public static void ShakeMe(string errorlist, MessageType messagetype, MessageBoxButtons button, MessageBoxIcon icon, bool shouldshake = false)
