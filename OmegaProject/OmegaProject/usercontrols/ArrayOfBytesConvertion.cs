@@ -7,6 +7,7 @@ namespace OmegaProject.usercontrols
 {
     public partial class ArrayOfBytesConvertion : UserControl
     {
+        // calculates the bytes / bools / array of bytes and make it auto change when filled in
         public ArrayOfBytesConvertion()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace OmegaProject.usercontrols
             GetListProcesses();
         }
 
+        // scanner for find all running processes in the background and foreground
         private void GetListProcesses()
         {
             Process[] processes = Process.GetProcesses();
@@ -36,6 +38,7 @@ namespace OmegaProject.usercontrols
             }
         }
 
+        // makes you refresh the ProcessList_GridView_CellContent
         private void button1_Click(object sender, EventArgs e)
         {
             ProcessList_GridView.Rows.Clear();
@@ -43,6 +46,7 @@ namespace OmegaProject.usercontrols
             ProcessList_GridView.Focus();
         }
 
+        // let you be able to copy the information of the ProcessList_GridView_CellContent
         private void ProcessList_GridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Clipboard.SetText(ProcessList_GridView[e.ColumnIndex, e.RowIndex].Value.ToString());
