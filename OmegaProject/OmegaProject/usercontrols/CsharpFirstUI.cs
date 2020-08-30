@@ -47,6 +47,7 @@ namespace OmegaProject.usercontrols
             InitializeComponent();
         }
 
+        // loads first menu
         private void CsharpFirstUI_Load(object sender, EventArgs e)
         {
             btnBack.Visible = false;
@@ -57,6 +58,7 @@ namespace OmegaProject.usercontrols
             panel5.Controls.Add(home);
         }
 
+        // if second fame menu is open it return to the main home menu
         private void btnBack_Click(object sender, EventArgs e)
         {
             panel5.Controls["UCHome"].BringToFront();
