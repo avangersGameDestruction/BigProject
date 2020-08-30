@@ -45,7 +45,10 @@ namespace OmegaProject
 
         private void autoClickerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ClearPanel();
+            autoclicker autoclicker = new autoclicker();
+            autoclicker.Dock = DockStyle.Fill;
+            panel1.Controls.Add(autoclicker);
         }
     }
 }
