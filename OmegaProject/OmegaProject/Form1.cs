@@ -29,19 +29,6 @@ namespace OmegaProject
             panel1.Controls.Remove(ArrayOfBytes);
         }
 
-        private void ClearControlPanel()
-        {
-            ArrayOfBytesConvertion AoB = new ArrayOfBytesConvertion();
-            AOBPatternFinder patternFinder = new AOBPatternFinder();
-            autoclicker autoclicker = new autoclicker();
-            CsharpFirstUI csharp = new CsharpFirstUI();
-
-            panel1.Controls.Remove(AoB);
-            panel1.Controls.Remove(patternFinder);
-            panel1.Controls.Remove(autoclicker);
-            panel1.Controls.Remove(csharp);
-        }
-
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +38,6 @@ namespace OmegaProject
         {
             ClearPanel();
             panel1.Controls.Clear();
-            ///ClearControlPanel();
             ArrayOfBytesConvertion AoB = new ArrayOfBytesConvertion();
             AoB.Dock = DockStyle.Fill;
             panel1.Controls.Add(AoB);
@@ -60,7 +46,6 @@ namespace OmegaProject
         private void aOBPatternFinderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            //ClearControlPanel();
             panel1.Controls.Clear();
             AOBPatternFinder patternFinder = new AOBPatternFinder();
             patternFinder.Dock = DockStyle.Fill;
@@ -70,7 +55,6 @@ namespace OmegaProject
         private void autoClickerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            //ClearControlPanel();
             panel1.Controls.Clear();
             autoclicker autoclicker = new autoclicker();
             autoclicker.Dock = DockStyle.Fill;
@@ -80,7 +64,6 @@ namespace OmegaProject
         private void cUI1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            //ClearControlPanel();
             panel1.Controls.Clear();
             CsharpFirstUI csharp = new CsharpFirstUI();
             csharp.Dock = DockStyle.Fill;
