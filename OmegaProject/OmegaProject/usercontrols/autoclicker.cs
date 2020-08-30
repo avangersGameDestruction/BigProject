@@ -28,6 +28,7 @@ namespace OmegaProject.usercontrols
             InitializeComponent();
         }
 
+        // starts the auto clicker + give information about click limit
         private void button1_Click(object sender, EventArgs e)
         {
             if ((int)numericUpDown1.Value < 300)
@@ -42,6 +43,7 @@ namespace OmegaProject.usercontrols
             button2.Enabled = true;
         }
 
+        // stops the auto clicker
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -49,6 +51,7 @@ namespace OmegaProject.usercontrols
             button1.Enabled = true;
         }
 
+        // implementing timer by scanning mouse clicks
         private void timer1_Tick(object sender, EventArgs e)
         {
             int cpt = 0;
@@ -79,17 +82,22 @@ namespace OmegaProject.usercontrols
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
 
+        // scans down click
         void sendMouseDown()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
         }
 
+        // scans when mouse got pressed and clicker did go back up
         void sendMouseUp()
         {
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
 
+        // call function for GlobalKeyBoardHook
         GlobalKeyBoardHook gHook;
+
+        // GlobalKeyBoardHook gets loaded + scans for keys who get presses
         private void autoclicker_Load(object sender, EventArgs e)
         {
             comboBox2.SelectedIndex = 0;
@@ -105,6 +113,7 @@ namespace OmegaProject.usercontrols
             gHook.hook();
         }
 
+        // short cut handler
         public void gHook_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
