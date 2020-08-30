@@ -16,5 +16,17 @@ namespace OmegaProject.usercontrols.ui_1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!CsharpFirstUI.Instance.PnlContainer.Controls.ContainsKey("UCNext"))
+            {
+                UCNext un = new UCNext();
+                un.Dock = DockStyle.Fill;
+                CsharpFirstUI.Instance.PnlContainer.Controls.Add(un);
+            }
+            CsharpFirstUI.Instance.PnlContainer.Controls["UCNext"].BringToFront();
+            CsharpFirstUI.Instance.BackButton.Visible = true;
+        }
     }
 }
