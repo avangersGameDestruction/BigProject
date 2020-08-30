@@ -10,6 +10,7 @@ namespace OmegaProject
 {
     public class ByteConverter_ : INotifyPropertyChanged
     {
+        // multiple call functions for use in every line of code and function who got called here
         public event PropertyChangedEventHandler PropertyChanged;
         private int _4byte;
         private int _4byteX8;
@@ -18,9 +19,9 @@ namespace OmegaProject
         private int _u30;
         private float _ieeex32;
         private double _ieeex64;
-
+        // OnPropertyChanged call function 
         private void OnPropertyChanged(string PropertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
-
+        // U30 string calculation
         public string U30
         {
             get => _u30.ToString("X");
@@ -36,7 +37,7 @@ namespace OmegaProject
                 OnPropertyChanged("U30");
             }
         }
-
+        // Hex string calculation
         public string Hex
         {
             get => _hex.ToString("X");
@@ -52,7 +53,7 @@ namespace OmegaProject
                 OnPropertyChanged("Hex");
             }
         }
-
+        // FourByte_x8_p6 int calculation
         public int FourByte_x8_p6
         {
             get => _4bytex8p6;
@@ -68,7 +69,7 @@ namespace OmegaProject
                 OnPropertyChanged("4bytex8p6");
             }
         }
-
+        // FourByte_x8 int calculation
         public int FourByte_x8
         {
             get => _4byteX8;
@@ -84,7 +85,7 @@ namespace OmegaProject
                 OnPropertyChanged("4byteX8");
             }
         }
-
+        // FourByte int calculation
         public int FourByte
         {
             get => _4byte;
@@ -100,7 +101,7 @@ namespace OmegaProject
                 OnPropertyChanged("4byte");
             }
         }
-
+        // Ieeex32 string calculation
         public string Ieeex32
         {
             get
@@ -131,7 +132,7 @@ namespace OmegaProject
                 catch { }
             }
         }
-
+        // Ieeex64 string calculation
         public string Ieeex64
         {
             get
@@ -166,7 +167,7 @@ namespace OmegaProject
                 catch { }
             }
         }
-
+        // UnityFloatx32 string calculation
         public string UnityFloatx32
         {
             get { return BitConverter.ToString(BitConverter.GetBytes(_ieeex32)).Replace("-", " "); }
@@ -185,7 +186,7 @@ namespace OmegaProject
                 catch { }
             }
         }
-
+        // HandleIEEE754x32Input float calculation
         private float HandleIEEE754x32Input(string val)
         {
             val = val.Replace(" ", string.Empty);
@@ -196,7 +197,7 @@ namespace OmegaProject
             }
             return 0f;
         }
-
+        // HandleIEEEx64Input double calculation
         private double HandleIEEEx64Input(string val)
         {
             val = val.Replace(" ", string.Empty);
@@ -207,7 +208,7 @@ namespace OmegaProject
             }
             return 0.0;
         }
-
+        // HandleHexInput int calculation
         private int HandleHexInput(string val)
         {
             if (Regex.IsMatch(val, "^[\\da-fA-F]+$"))
@@ -217,7 +218,7 @@ namespace OmegaProject
             }
             return 0;
         }
-
+        // ConvertU30ToInt int calculation
         private int ConvertU30ToInt(int val)
         {
             int result;
@@ -246,7 +247,7 @@ namespace OmegaProject
             catch (Exception) { result = _u30; }
             return result;
         }
-
+        // ConvertIntToU30 int calculation
         private int ConvertIntToU30()
         {
             if (_4byte < 1)
