@@ -25,6 +25,8 @@ namespace OmegaProject
             if (AOBPatternFinder != null) AOBPatternFinder.Dispose();
             if (autoclicker != null) autoclicker.Dispose();
             if (CsharpFirstUI != null) CsharpFirstUI.Dispose();
+
+            panel1.Controls.Remove(ArrayOfBytes);
         }
 
         private void ClearControlPanel()
@@ -48,7 +50,8 @@ namespace OmegaProject
         private void arrayOfBytesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            ClearControlPanel();
+            panel1.Controls.Clear();
+            ///ClearControlPanel();
             ArrayOfBytesConvertion AoB = new ArrayOfBytesConvertion();
             AoB.Dock = DockStyle.Fill;
             panel1.Controls.Add(AoB);
@@ -57,7 +60,8 @@ namespace OmegaProject
         private void aOBPatternFinderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            ClearControlPanel();
+            //ClearControlPanel();
+            panel1.Controls.Clear();
             AOBPatternFinder patternFinder = new AOBPatternFinder();
             patternFinder.Dock = DockStyle.Fill;
             panel1.Controls.Add(patternFinder);
@@ -66,7 +70,8 @@ namespace OmegaProject
         private void autoClickerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            ClearControlPanel();
+            //ClearControlPanel();
+            panel1.Controls.Clear();
             autoclicker autoclicker = new autoclicker();
             autoclicker.Dock = DockStyle.Fill;
             panel1.Controls.Add(autoclicker);
@@ -75,7 +80,8 @@ namespace OmegaProject
         private void cUI1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearPanel();
-            ClearControlPanel();
+            //ClearControlPanel();
+            panel1.Controls.Clear();
             CsharpFirstUI csharp = new CsharpFirstUI();
             csharp.Dock = DockStyle.Fill;
             panel1.Controls.Add(csharp);
