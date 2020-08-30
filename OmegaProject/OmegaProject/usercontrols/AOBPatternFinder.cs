@@ -14,6 +14,7 @@ namespace OmegaProject.usercontrols
 {
     public partial class AOBPatternFinder : UserControl
     {
+        // some implementings for the Whitelist array of bytes and a int for protection
         private readonly List<char> Whitelist = new List<char>() { '?', '*', 'x', 'X' };
         private List<string> AOBS = new List<string>();
         private int OmegaProject = 0;
@@ -22,8 +23,10 @@ namespace OmegaProject.usercontrols
             InitializeComponent();
         }
 
+        // a boolean for OnWhiteList
         private bool OnWhitelist(char c) => Whitelist.Contains(c);
 
+        // a function for makinng / generating a replace code
         private string ReplaceAt(string Input, int Index, char NewChar)
         {
             StringBuilder builder = new StringBuilder(Input);
@@ -31,6 +34,7 @@ namespace OmegaProject.usercontrols
             return builder.ToString();
         }
 
+        // wildcard string to make a convert of the old and new string who got placed in the input
         private void WildcardString(ref string original, string others)
         {
             for(int i = 1; i < original.Length; i++)
@@ -50,7 +54,7 @@ namespace OmegaProject.usercontrols
                 } catch { Console.WriteLine("ok"); }
             }
         }
-
+        // compare function 
         private void button2_Click(object sender, EventArgs e)
         {
             AOBS.Clear();
@@ -68,6 +72,7 @@ namespace OmegaProject.usercontrols
             ProtectionSource();
         }
 
+        // protection function
         private void ProtectionSource()
         {
             if (OmegaProject == 0)
@@ -85,6 +90,7 @@ namespace OmegaProject.usercontrols
             }
         }
 
+        // counting the spaces between the input
         private static int SpaceCount(string Project)
         {
             int a = 0;
@@ -97,6 +103,7 @@ namespace OmegaProject.usercontrols
             return a;
         }
 
+        // converts the input to everything and counts the characters
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Control TextBoxes in Controls) 
