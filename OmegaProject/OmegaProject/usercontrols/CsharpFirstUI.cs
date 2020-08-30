@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OmegaProject.usercontrols.ui_1;
 
 namespace OmegaProject.usercontrols
 {
@@ -19,7 +20,9 @@ namespace OmegaProject.usercontrols
 
         private void CsharpFirstUI_Load(object sender, EventArgs e)
         {
-
+            ucHome home = new ucHome();
+            home.Dock = DockStyle.Fill;
+            panel5.Controls.Add(home);
         }
     }
 }
