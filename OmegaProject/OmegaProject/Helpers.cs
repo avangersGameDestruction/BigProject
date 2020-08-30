@@ -1,8 +1,13 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using OmegaProject.usercontrols;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OmegaProject
 {
@@ -16,7 +21,7 @@ namespace OmegaProject
 
         public static void ShakeMe(string errorlist, MessageType messagetype, MessageBoxButtons button, MessageBoxIcon icon, bool shouldshake = false)
         {
-            Form form = MainWindow.ActiveForm;
+            Form form = Form.ActiveForm;
             var original = form.Location;
             var rnd = new Random(1337);
             const int shake_amplitude = 20;
@@ -29,12 +34,12 @@ namespace OmegaProject
                 }
             }
             form.Location = original;
-            MetroFramework.MetroMessageBox.Show(form, errorlist, messagetype.ToString(), button, icon, form.Height / 2);
+            //MessageBox.Show(form, errorlist, messagetype.ToString(), button, icon, form.Height / 2);
         }
 
         public static void ShakeMe()
         {
-            Form form = MainWindow.ActiveForm;
+            Form form = Form.ActiveForm;
             var original = form.Location;
             var rnd = new Random(1337);
             const int shake_amplitude = 20;
@@ -46,3 +51,4 @@ namespace OmegaProject
             form.Location = original;
         }
     }
+}
