@@ -63,6 +63,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalKeyBoardHook.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +78,24 @@
     </Compile>
     <Compile Include="usercontrols\ArrayOfBytesConvertion.Designer.cs">
       <DependentUpon>ArrayOfBytesConvertion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\autoclicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\autoclicker.Designer.cs">
+      <DependentUpon>autoclicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\CsharpFirstUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\CsharpFirstUI.Designer.cs">
+      <DependentUpon>CsharpFirstUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrols\ui 1\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\ui 1\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -96,6 +115,15 @@
     <EmbeddedResource Include="usercontrols\ArrayOfBytesConvertion.resx">
       <DependentUpon>ArrayOfBytesConvertion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\autoclicker.resx">
+      <DependentUpon>autoclicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\CsharpFirstUI.resx">
+      <DependentUpon>CsharpFirstUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\ui 1\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -110,5 +138,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

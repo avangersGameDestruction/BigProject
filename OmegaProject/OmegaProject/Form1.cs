@@ -50,5 +50,10 @@ namespace OmegaProject
             autoclicker.Dock = DockStyle.Fill;
             panel1.Controls.Add(autoclicker);
         }
+
+        private void cUI1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

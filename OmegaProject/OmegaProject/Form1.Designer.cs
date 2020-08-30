@@ -35,13 +35,16 @@
             this.aOBPatternFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.autoClickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cUiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cUI1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreatorsStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // CreatorsStrip
             // 
             this.CreatorsStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dutchyToolStripMenuItem});
+            this.dutchyToolStripMenuItem,
+            this.cUiToolStripMenuItem});
             this.CreatorsStrip.Location = new System.Drawing.Point(0, 0);
             this.CreatorsStrip.Name = "CreatorsStrip";
             this.CreatorsStrip.Size = new System.Drawing.Size(766, 24);
@@ -95,6 +98,21 @@
             this.autoClickerToolStripMenuItem.Text = "auto clicker";
             this.autoClickerToolStripMenuItem.Click += new System.EventHandler(this.autoClickerToolStripMenuItem_Click);
             // 
+            // cUiToolStripMenuItem
+            // 
+            this.cUiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cUI1ToolStripMenuItem});
+            this.cUiToolStripMenuItem.Name = "cUiToolStripMenuItem";
+            this.cUiToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.cUiToolStripMenuItem.Text = "C# ui";
+            // 
+            // cUI1ToolStripMenuItem
+            // 
+            this.cUI1ToolStripMenuItem.Name = "cUI1ToolStripMenuItem";
+            this.cUI1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cUI1ToolStripMenuItem.Text = "C# UI 1";
+            this.cUI1ToolStripMenuItem.Click += new System.EventHandler(this.cUI1ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +139,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem aOBPatternFinderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoClickerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cUiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cUI1ToolStripMenuItem;
     }
 }
 
