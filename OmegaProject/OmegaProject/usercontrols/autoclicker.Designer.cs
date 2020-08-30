@@ -139,6 +139,7 @@
             this.Controls.Add(this.button1);
             this.Name = "autoclicker";
             this.Size = new System.Drawing.Size(766, 402);
+            this.Load += new System.EventHandler(this.autoclicker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -44,7 +44,9 @@ namespace OmegaProject.usercontrols
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            timer1.Stop();
+            button2.Enabled = false;
+            button1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -85,6 +87,46 @@ namespace OmegaProject.usercontrols
         void sendMouseUp()
         {
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        }
+
+        GlobalKeyBoardHook gHook;
+        private void autoclicker_Load(object sender, EventArgs e)
+        {
+            comboBox2.SelectedIndex = 0;
+            button2.Enabled = false;
+
+            gHook = new GlobalKeyBoardHook();
+            gHook.KeyDown += new KeyEventHandler(gHook_KeyDown);
+            foreach (Keys key in Enum.GetValues(typeof(Keys)))
+            {
+                gHook.HookedKeys.Add(key);
+            }
+            
+            gHook.hook();
+        }
+
+        public void gHook_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                if ((int)numericUpDown1.Value < 300)
+                {
+                    MessageBox.Show("Minimum Value is 300");
+                    return;
+                }
+                Type = comboBox2.SelectedIndex;
+                timer1.Interval = Type == 0 ? (int)numericUpDown1.Value : 200;
+                timer1.Start();
+                button1.Enabled = false;
+                button2.Enabled = true;
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                timer1.Stop();
+
+                button2.Enabled = false;
+                button1.Enabled = true;
+            }
         }
     }
 }
