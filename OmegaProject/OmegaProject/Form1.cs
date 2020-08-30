@@ -53,7 +53,10 @@ namespace OmegaProject
 
         private void cUI1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ClearPanel();
+            CsharpFirstUI csharp = new CsharpFirstUI();
+            csharp.Dock = DockStyle.Fill;
+            panel1.Controls.Add(csharp);
         }
     }
 }
