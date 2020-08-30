@@ -201,9 +201,9 @@
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(59, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.Size = new System.Drawing.Size(62, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "C# Ui Academy";
+            this.label1.Text = "C# Ui 1";
             // 
             // btnBack
             // 
