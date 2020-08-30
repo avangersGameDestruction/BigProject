@@ -17,6 +17,7 @@ namespace OmegaProject.usercontrols.ui_1
             InitializeComponent();
         }
 
+        // make the CsharpFirstUI calculate what uc is active and if the return arrow got clicked it replace the fame window to the home window
         private void button1_Click(object sender, EventArgs e)
         {
             if (!CsharpFirstUI.Instance.PnlContainer.Controls.ContainsKey("UCNext"))
