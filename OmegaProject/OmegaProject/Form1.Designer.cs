@@ -33,10 +33,10 @@
             this.cheatEngineToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrayOfBytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aOBPatternFinderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.autoClickerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUI1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CreatorsStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,35 +66,27 @@
             this.arrayOfBytesToolStripMenuItem,
             this.aOBPatternFinderToolStripMenuItem});
             this.cheatEngineToolsToolStripMenuItem.Name = "cheatEngineToolsToolStripMenuItem";
-            this.cheatEngineToolsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cheatEngineToolsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cheatEngineToolsToolStripMenuItem.Text = "Cheat Engine Tools";
             // 
             // arrayOfBytesToolStripMenuItem
             // 
             this.arrayOfBytesToolStripMenuItem.Name = "arrayOfBytesToolStripMenuItem";
-            this.arrayOfBytesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arrayOfBytesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.arrayOfBytesToolStripMenuItem.Text = "Array of Bytes";
             this.arrayOfBytesToolStripMenuItem.Click += new System.EventHandler(this.arrayOfBytesToolStripMenuItem_Click);
             // 
             // aOBPatternFinderToolStripMenuItem
             // 
             this.aOBPatternFinderToolStripMenuItem.Name = "aOBPatternFinderToolStripMenuItem";
-            this.aOBPatternFinderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aOBPatternFinderToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.aOBPatternFinderToolStripMenuItem.Text = "AOBPatternFinder";
             this.aOBPatternFinderToolStripMenuItem.Click += new System.EventHandler(this.aOBPatternFinderToolStripMenuItem_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 402);
-            this.panel1.TabIndex = 1;
             // 
             // autoClickerToolStripMenuItem
             // 
             this.autoClickerToolStripMenuItem.Name = "autoClickerToolStripMenuItem";
-            this.autoClickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.autoClickerToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.autoClickerToolStripMenuItem.Text = "auto clicker";
             this.autoClickerToolStripMenuItem.Click += new System.EventHandler(this.autoClickerToolStripMenuItem_Click);
             // 
@@ -109,9 +101,17 @@
             // cUI1ToolStripMenuItem
             // 
             this.cUI1ToolStripMenuItem.Name = "cUI1ToolStripMenuItem";
-            this.cUI1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cUI1ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.cUI1ToolStripMenuItem.Text = "C# UI 1";
             this.cUI1ToolStripMenuItem.Click += new System.EventHandler(this.cUI1ToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(766, 402);
+            this.panel1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -120,9 +120,11 @@
             this.ClientSize = new System.Drawing.Size(766, 426);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CreatorsStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.CreatorsStrip;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "OmegaProject";
             this.CreatorsStrip.ResumeLayout(false);
             this.CreatorsStrip.PerformLayout();
             this.ResumeLayout(false);
