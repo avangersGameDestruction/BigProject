@@ -85,6 +85,12 @@
     <Compile Include="usercontrols\autoclicker.Designer.cs">
       <DependentUpon>autoclicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrols\Base64EncodeDecode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\Base64EncodeDecode.Designer.cs">
+      <DependentUpon>Base64EncodeDecode.cs</DependentUpon>
+    </Compile>
     <Compile Include="usercontrols\CsharpFirstUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\autoclicker.resx">
       <DependentUpon>autoclicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrols\Base64EncodeDecode.resx">
+      <DependentUpon>Base64EncodeDecode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrols\CsharpFirstUI.resx">
       <DependentUpon>CsharpFirstUI.cs</DependentUpon>
