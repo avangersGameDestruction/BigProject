@@ -37,6 +37,7 @@
             this.cUiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUI1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.base64EnDecodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreatorsStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             // 
             this.dutchyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cheatEngineToolsToolStripMenuItem,
-            this.autoClickerToolStripMenuItem});
+            this.autoClickerToolStripMenuItem,
+            this.base64EnDecodeToolStripMenuItem});
             this.dutchyToolStripMenuItem.Name = "dutchyToolStripMenuItem";
             this.dutchyToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.dutchyToolStripMenuItem.Text = "Dutchy";
@@ -66,7 +68,7 @@
             this.arrayOfBytesToolStripMenuItem,
             this.aOBPatternFinderToolStripMenuItem});
             this.cheatEngineToolsToolStripMenuItem.Name = "cheatEngineToolsToolStripMenuItem";
-            this.cheatEngineToolsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.cheatEngineToolsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cheatEngineToolsToolStripMenuItem.Text = "Cheat Engine Tools";
             // 
             // arrayOfBytesToolStripMenuItem
@@ -86,7 +88,7 @@
             // autoClickerToolStripMenuItem
             // 
             this.autoClickerToolStripMenuItem.Name = "autoClickerToolStripMenuItem";
-            this.autoClickerToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.autoClickerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.autoClickerToolStripMenuItem.Text = "auto clicker";
             this.autoClickerToolStripMenuItem.Click += new System.EventHandler(this.autoClickerToolStripMenuItem_Click);
             // 
@@ -112,6 +114,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 402);
             this.panel1.TabIndex = 1;
+            // 
+            // base64EnDecodeToolStripMenuItem
+            // 
+            this.base64EnDecodeToolStripMenuItem.Name = "base64EnDecodeToolStripMenuItem";
+            this.base64EnDecodeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.base64EnDecodeToolStripMenuItem.Text = "Base64 En - Decode";
+            this.base64EnDecodeToolStripMenuItem.Click += new System.EventHandler(this.base64EnDecodeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -143,6 +152,7 @@
         private System.Windows.Forms.ToolStripMenuItem autoClickerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cUiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cUI1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem base64EnDecodeToolStripMenuItem;
     }
 }
 

@@ -18,6 +18,7 @@ namespace OmegaProject
         AOBPatternFinder AOBPatternFinder;
         autoclicker autoclicker;
         CsharpFirstUI CsharpFirstUI;
+        Base64EncodeDecode Base64EncodeDecode;
 
         // private function to scan if any uc is open and close it if new go open
         private void ClearPanel()
@@ -26,6 +27,7 @@ namespace OmegaProject
             if (AOBPatternFinder != null) AOBPatternFinder.Dispose();
             if (autoclicker != null) autoclicker.Dispose();
             if (CsharpFirstUI != null) CsharpFirstUI.Dispose();
+            if (Base64EncodeDecode != null) Base64EncodeDecode.Dispose();
 
             panel1.Controls.Remove(ArrayOfBytes);
         }
@@ -73,6 +75,15 @@ namespace OmegaProject
             CsharpFirstUI csharp = new CsharpFirstUI();
             csharp.Dock = DockStyle.Fill;
             panel1.Controls.Add(csharp);
+        }
+
+        private void base64EnDecodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+            panel1.Controls.Clear();
+            Base64EncodeDecode base64 = new Base64EncodeDecode();
+            base64.Dock = DockStyle.Fill;
+            panel1.Controls.Add(base64);
         }
     }
 }
